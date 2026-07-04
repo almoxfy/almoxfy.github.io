@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Almoxfy — Visibilidade de itens sem giro e gestão inteligente de recursos públicos.">
+  <meta name="theme-color" content="#1e3a5f">
+  <title>Almoxfy — Almoxarifado Compartilhado</title>
+  <link rel="icon" href="assets/images/logos/almoxfy_logo_1.png" type="image/png">
+  <style>
+    :root {
+      --color-bg: #f8fafc;
+      --color-surface: #ffffff;
+      --color-text: #1e293b;
+      --color-muted: #64748b;
+      --color-accent: #2563eb;
+      --color-accent-dark: #1e40af;
+      --color-border: #e2e8f0;
+      --color-highlight: #ecfdf5;
+      --color-highlight-border: #6ee7b7;
+      --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --max-width: 52rem;
+      --radius: 0.75rem;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .banner {
+      width: 100%;
+      display: block;
+      background: linear-gradient(180deg, #1e3a5f 0%, #0f172a 100%);
+    }
+
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 280px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2.5rem 1.5rem 2rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero .tagline {
+      font-size: 1.125rem;
+      color: var(--color-muted);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .badge--govtech {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+
+    .badge--impact {
+      background: #d1fae5;
+      color: #065f46;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+    }
+
+    section {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    section h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    section p {
+      margin-bottom: 1rem;
+    }
+
+    section p:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    ul {
+      padding-left: 1.25rem;
+      margin-bottom: 0;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    .metric {
+      background: var(--color-highlight);
+      border: 1px solid var(--color-highlight-border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      font-size: 1.05rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .links li {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.75rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .links li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .links a {
+      color: var(--color-accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      color: var(--color-accent-dark);
+      text-decoration: underline;
+    }
+
+    .links span {
+      color: var(--color-muted);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      color: var(--color-muted);
+      font-size: 0.875rem;
+    }
+
+    footer img {
+      width: 72px;
+      height: auto;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    footer a {
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header class="banner">
+    <img src="assets/images/logos/almoxfy_banner_1.png" alt="Almoxfy Banner">
+  </header>
+
+  <div class="hero">
+    <h1>Almoxfy: Almoxarifado Compartilhado 📦</h1>
+    <p class="tagline">Visibilidade de itens sem giro e gestão inteligente de recursos públicos.</p>
+    <div class="badges">
+      <span class="badge badge--govtech">Software · GovTech</span>
+      <span class="badge badge--impact">Econômico · Ambiental · Transparência</span>
+    </div>
+  </div>
+
+  <main>
+    <section id="desafio">
+      <h2>📍 O Desafio</h2>
+      <p>
+        Em grandes estruturas, como na gestão pública, o Almoxarifado Central frequentemente guarda itens sem giro.
+        A ausência de um mecanismo integrado de consulta e compartilhamento entre diferentes secretarias gera um
+        problema grave: <strong>a falta de transparência do estoque ocioso</strong>.
+      </p>
+      <p>
+        <strong>A Dor Principal:</strong> Sem visibilidade do que está parado, setores adquirem materiais que já
+        existem na organização, resultando em um enorme desperdício de recursos públicos.
+      </p>
+    </section>
+
+    <section id="solucao">
+      <h2>💡 A Solução</h2>
+      <p>
+        O <strong>Almoxfy</strong> surge como uma Prova de Conceito (PoC) para criar uma verdadeira
+        <strong>"bolsa de materiais" interna</strong>. Nosso objetivo é catalogar itens ociosos de forma digital,
+        permitindo que diferentes departamentos e secretarias consultem, localizem e requisitem esses materiais de
+        forma rápida e transparente.
+      </p>
+      <h2 style="font-size: 1rem; margin-top: 1.25rem;">📦 Entregáveis-Chave</h2>
+      <ul>
+        <li><strong>Catálogo Digital:</strong> Mapeamento completo de itens ociosos/sem giro.</li>
+        <li><strong>Fluxo de Transferência:</strong> Sistema simplificado de requisição e remanejamento entre setores.</li>
+      </ul>
+    </section>
+
+    <section id="tecnologias">
+      <h2>⚙️ Tecnologias e Recursos Principais</h2>
+      <p>Nossa plataforma foi desenhada para ser intuitiva e facilmente integrável:</p>
+      <ul>
+        <li>🔍 <strong>Catálogo Inteligente e Busca Avançada</strong></li>
+        <li>🔄 <strong>Workflow de Aprovação de Requisições</strong></li>
+        <li>🔗 <strong>Integração de Sistemas:</strong> Conexão facilitada com os sistemas de compras e patrimônio já existentes.</li>
+      </ul>
+    </section>
+
+    <section id="metrica">
+      <h2>🎯 Métrica de Sucesso</h2>
+      <p class="metric">
+        Item ocioso localizado e remanejado, evitando uma nova compra desnecessária.
+      </p>
+    </section>
+
+    <section id="demandante">
+      <h2>🏛️ Demandante Original</h2>
+      <p>
+        Este projeto foi inicialmente idealizado para atender às necessidades de inovação da
+        <strong>Secretaria Municipal de Administração de Florianópolis</strong>, com foco em trazer sustentabilidade
+        e economia para a máquina pública.
+      </p>
+    </section>
+
+    <section id="links">
+      <h2>🔗 Links</h2>
+      <ul class="links">
+        <li>
+          <a href="https://github.com/almoxfy/almoxfy-docs">Documentação detalhada</a>
+          <span>— Repositório almoxfy-docs</span>
+        </li>
+        <li>
+          <a href="https://github.com/almoxfy">Organização Almoxfy</a>
+          <span>— Projetos no GitHub</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/images/logos/almoxfy_logo_1.png" alt="Almoxfy">
+    <p>
+      Licenciado sob <a href="LICENSE">Apache License 2.0</a>
+    </p>
+  </footer>
+</body>
+</html>
